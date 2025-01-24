@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+  <main class="px-6 py-9">
+    <div class="bg-white px-10 py-6 rounded-lg">
+      <form action="" class="flex items-end">
+        <div>
+          <label class="text-sm font-bold">日付</label>
+          <div class="relative max-w-sm">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+              <img src="./img/icon-calendar.svg" alt="calender" width="24" height="24">
+            </div>
+            <input name="inout_date" type="date" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full ps-10 p-3">
+          </div>
+        </div>
+        
+        <div class="ml-6">
+          <label class="text-sm font-bold">種別</label>
+          <select name="inout_type" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 pr-4">
+            <option value="1">出金</option>
+            <option value="2">入金</option>
+          </select>
+        </div>
+
+        <div class="ml-6">
+          <label class="text-sm font-bold">カテゴリー</label>
+          <select name="category_id" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 pr-4">
+            <option value="1">日用品費</option>
+            <option value="2">交際費</option>
+            <option value="3">食費</option>
+            <option value="4">雑費</option>
+          </select>
+        </div>
+        
+        <div class="ml-6">
+          <label class="text-sm font-bold">内容</label>
+          <input type="text" name="description" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3" placeholder="登録内容を入力">
+        </div>
+        
+        <div class="ml-6">
+          <label class="text-sm font-bold">金額</label>
+          <div class="flex items-end">
+            <input type="text" name="amount" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3" placeholder="金額を入力">
+            <div class="ml-1 text-sm font-bold">円</div>
+          </div>
+        </div>
+        <button type="submit" class="ml-6 px-9 py-3 bg-orange-500 hover:bg-orange-600 flex items-center justify-center rounded-lg text-xl font-bold text-white">登録</button>
+      </form>
+    </div>
+    <div class="mt-3 bg-white px-10 py-6 rounded-lg">
+      <table class="w-full">
+        <thead class="border-b-2 border-zinc-400">
+          <tr>
+            <th class="p-4">日付</th>
+            <th class="p-4">種別</th>
+            <th class="p-4">カテゴリー</th>
+            <th class="p-4">内容</th>
+            <th class="text-right pr-4">金額</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+      <div class="mt-5 text-right">
+        <span class="mr-12 font-bold text-lg">合計</span>
+        <span class="font-bold text-lg">0</span>円
+      </div>
+    </div>
+  </main>
+</body>
+</html>
